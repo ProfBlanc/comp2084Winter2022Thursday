@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<ul>
+
+    @foreach (string program in ViewBag.ProgramNames)
+    {
+        <!--
+        <li>@program</li>
+           
+        -->
+
+    <li>
+        <a href="/Programs/Name/@program">@program</a>
+    </li>
+    }
+</ul>
