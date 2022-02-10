@@ -6,15 +6,15 @@ namespace comp2084Winter2022Thursday.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class Student
+    public partial class Prof
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Student()
+        public Prof()
         {
             Semesters = new HashSet<Semester>();
         }
 
-        public int StudentID { get; set; }
+        public int ProfID { get; set; }
 
         [Required]
         [StringLength(50)]
@@ -23,10 +23,6 @@ namespace comp2084Winter2022Thursday.Models
         [Required]
         [StringLength(50)]
         public string LastName { get; set; }
-
-        public int SchoolAttending { get; set; }
-
-        public virtual School School { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Semester> Semesters { get; set; }

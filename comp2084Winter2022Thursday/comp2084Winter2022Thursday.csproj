@@ -128,15 +128,21 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CoursesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProfsController.cs" />
     <Compile Include="Controllers\ProgramsController.cs" />
     <Compile Include="Controllers\SchoolsController.cs" />
+    <Compile Include="Controllers\SemestersController.cs" />
     <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Course.cs" />
     <Compile Include="Models\DataContext.cs" />
+    <Compile Include="Models\Prof.cs" />
     <Compile Include="Models\School.cs" />
+    <Compile Include="Models\Semester.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -190,6 +196,21 @@
     <Content Include="Views\Students\Details.cshtml" />
     <Content Include="Views\Students\Edit.cshtml" />
     <Content Include="Views\Students\Index.cshtml" />
+    <Content Include="Views\Courses\Create.cshtml" />
+    <Content Include="Views\Courses\Delete.cshtml" />
+    <Content Include="Views\Courses\Details.cshtml" />
+    <Content Include="Views\Courses\Edit.cshtml" />
+    <Content Include="Views\Courses\Index.cshtml" />
+    <Content Include="Views\Profs\Create.cshtml" />
+    <Content Include="Views\Profs\Delete.cshtml" />
+    <Content Include="Views\Profs\Details.cshtml" />
+    <Content Include="Views\Profs\Edit.cshtml" />
+    <Content Include="Views\Profs\Index.cshtml" />
+    <Content Include="Views\Semesters\Create.cshtml" />
+    <Content Include="Views\Semesters\Delete.cshtml" />
+    <Content Include="Views\Semesters\Details.cshtml" />
+    <Content Include="Views\Semesters\Edit.cshtml" />
+    <Content Include="Views\Semesters\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
