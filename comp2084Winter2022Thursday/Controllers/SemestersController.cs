@@ -14,6 +14,19 @@ namespace comp2084Winter2022Thursday.Controllers
     {
         private DataContext db = new DataContext();
 
+
+
+        public ActionResult Year(int year) {
+
+            return View();
+        }
+
+        public ActionResult Term(int year, string term) {
+
+            return View();
+
+        }
+
         // GET: Semesters
         public ActionResult Index()
         {

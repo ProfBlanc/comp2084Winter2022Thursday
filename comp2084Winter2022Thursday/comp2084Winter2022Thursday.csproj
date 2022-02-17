@@ -140,6 +140,7 @@
     </Compile>
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\DataContext.cs" />
+    <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Prof.cs" />
     <Compile Include="Models\School.cs" />
     <Compile Include="Models\Semester.cs" />
@@ -211,6 +212,8 @@
     <Content Include="Views\Semesters\Details.cshtml" />
     <Content Include="Views\Semesters\Edit.cshtml" />
     <Content Include="Views\Semesters\Index.cshtml" />
+    <Content Include="Views\Semesters\Year.cshtml" />
+    <Content Include="Views\Semesters\Term.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

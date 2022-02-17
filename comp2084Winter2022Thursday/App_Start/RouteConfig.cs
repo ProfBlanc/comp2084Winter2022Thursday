@@ -13,14 +13,28 @@ namespace comp2084Winter2022Thursday
 		{
 			routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+
+
+			routes.MapRoute(
+
+				name: "SemesterYear",
+				url: "Semesters/{year}",
+				defaults: new
+				{
+					controller = "Semesters",
+					action = "Year"
+				},
+				constraints: new{ year = @"\d{4}" }
+
+				);
+
 			routes.MapRoute(
 				
 				name: "SemesterTerm",
 				url: "Semesters/{year}/{term}",
 				defaults: new {
 				controller = "Semesters",
-				action = "Term",
-				year = UrlParameter.Optional
+				action = "Term"
 				},
 				constraints: new { 
 					year = @"\d{4}",
