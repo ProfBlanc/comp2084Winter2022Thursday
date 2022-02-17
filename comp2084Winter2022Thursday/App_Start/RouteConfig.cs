@@ -16,7 +16,6 @@ namespace comp2084Winter2022Thursday
 
 
 			routes.MapRoute(
-
 				name: "SemesterYear",
 				url: "Semesters/{year}",
 				defaults: new
@@ -25,11 +24,8 @@ namespace comp2084Winter2022Thursday
 					action = "Year"
 				},
 				constraints: new{ year = @"\d{4}" }
-
-				);
-
+);
 			routes.MapRoute(
-				
 				name: "SemesterTerm",
 				url: "Semesters/{year}/{term}",
 				defaults: new {

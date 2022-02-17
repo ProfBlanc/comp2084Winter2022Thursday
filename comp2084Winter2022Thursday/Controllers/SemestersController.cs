@@ -18,6 +18,36 @@ namespace comp2084Winter2022Thursday.Controllers
 
         public ActionResult Year(int year) {
 
+            var listsOfNames = new List<string> { 
+            "Ben Blanc",
+            "Sarah O'Connor",
+            "Prof",
+            "Mary",
+            "sally-Sally"
+            };
+
+            //lambda expression
+            // placeholder represents a record of data => methods or actions
+         var subList =   listsOfNames.Where(s => s.Length < 5).ToList();
+
+            var listOfLogins = new List<Login> { 
+                new Login(){ Username = "ben@blanc.ca", Password="hello", ConfirmPassword = "hello", RememberMe = true},
+                new Login(){ Username = "blanc@ben.ca", Password="goodbye", ConfirmPassword = "goodbye", RememberMe = false},
+                new Login(){ Username = "comp@gc.ca", Password="comp2084", ConfirmPassword = "comp2084", RememberMe = true},
+            };
+
+            var secondSubList = listOfLogins
+                                .Where(s => s.Username.Length > 5 && s.Password.Length <= 5)
+                                .Select(s => s.Username)
+                                .ToList();
+            ViewBag.SubList = secondSubList;
+           
+            //with quick tutorial of LINQ
+            //TASK: query the Semester table of the database
+            // get/retrieve only the YEAR field WHERE the year is equal to the value passed
+            // refer to tutorial above AND index method
+            //you do not need to pass to the view yet. just retrieve the list of info
+
             return View();
         }
 
