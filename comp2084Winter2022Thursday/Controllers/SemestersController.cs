@@ -41,19 +41,54 @@ namespace comp2084Winter2022Thursday.Controllers
                                 .Select(s => s.Username)
                                 .ToList();
             ViewBag.SubList = secondSubList;
-           
+
             //with quick tutorial of LINQ
             //TASK: query the Semester table of the database
             // get/retrieve only the YEAR field WHERE the year is equal to the value passed
             // refer to tutorial above AND index method
             //you do not need to pass to the view yet. just retrieve the list of info
 
-            return View();
+            var semestersOfYears = db
+                                    .Semesters
+                                    .Where(s => s.Year == year)
+                                    .OrderBy(s => s.Term)
+                                    .Select(s => s.Term);
+                                    
+
+            ViewBag.Year = year;
+
+            return View(semestersOfYears.ToList());
         }
 
         public ActionResult Term(int year, string term) {
 
-            return View();
+            //query the database to get all record information (including joining tables)
+            //for all records that have the specified year and term (passed as param)
+
+
+            /*
+             *SQL
+             *      select
+             *      where
+             *      
+             *      joins
+             *
+             *LINQ
+             *  
+             *      where
+             *      select
+             *      include
+             *
+             */ 
+
+            var allRecords = db
+                                .Semesters
+                                .Where(s => s.Year == year && s.Term == term)
+                                .Include(s => s.Cours)
+                                .Include(s => s.Prof)
+                                .Include(s => s.Student);
+
+            return View(allRecords.ToList());
 
         }
 

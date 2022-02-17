@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<string>
 @{
     ViewBag.Title = "Year";
 }
@@ -12,3 +12,25 @@
         <li>@item</li>
     }
 </ul>
+
+
+<p>
+    Here is a list of the semesters for the year @ViewBag.Year
+</p>
+
+
+<ol>
+    @foreach (var item in Model)
+    {
+        <li>@item</li>
+    }
+</ol>
+
+
+@foreach (var item in Model) { 
+
+   <p>
+       @Html.ActionLink(item, "Term", "Semesters", new { year = ViewBag.Year, term = item   }, new { })
+   </p>
+
+}

@@ -1,7 +1,36 @@
-﻿
+﻿@model IEnumerable<comp2084Winter2022Thursday.Models.Semester>
 @{
     ViewBag.Title = "Term";
 }
 
 <h2>Term</h2>
 
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Cours.CourseName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Year)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Term)
+        </th>
+        </tr>
+
+    @foreach (var item in Model) { 
+    
+<tr>
+
+    <td>
+        @Html.DisplayFor(model => item.Cours.CourseName)
+    </td>
+    <td>
+        @Html.DisplayFor(model => item.Year)
+    </td>
+    <td>
+        @Html.DisplayFor(model => item.Term)
+    </td>
+
+</tr>
+    }
